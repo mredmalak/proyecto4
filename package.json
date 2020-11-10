@@ -1,0 +1,12 @@
+{
+  "name": "proyecto4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mredmalak/proyecto4.git",
+  "author": "germanmorenoortiz <germanmorenoortiz.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "lerna": "^3.22.1"
+  }
+}
