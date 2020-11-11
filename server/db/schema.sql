@@ -1,13 +1,13 @@
 CREATE TABLE recetas (
   receta_id serial PRIMARY KEY  
 , name_receta    text NOT NULL
-, procces_receta text NOT NULL
+, procces_receta VARCHAR (255) NOT NULL
 );
 
 CREATE TABLE ingredientes (
   ingrediente_id  serial PRIMARY KEY
 , name_ingrediente     text NOT NULL
-, amount_ingrediente integer NOT NULL
+, amount_ingrediente VARCHAR (255) 
 );
 
 CREATE TABLE receta_ingrediente (
