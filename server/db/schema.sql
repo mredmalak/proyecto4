@@ -1,10 +1,12 @@
-DROP TABLE game_factories IF EXISTS;
+DROP TABLE recetas IF EXISTS;
+DROP TABLE ingredientes IF EXISTS;
 
 
 CREATE TABLE recetas (
   receta_id serial PRIMARY KEY,
   name_receta    text NOT NULL,
-  procces_receta VARCHAR (255)
+  procces_receta VARCHAR (255),
+  porciones_receta INT,
 );
 
 CREATE TABLE ingredientes (
