@@ -14,3 +14,4 @@ INSERT INTO ingredientes (name_ingrediente, amount_ingrediente) VALUES
 ('harina', 100),
 ('carrillada', 400),
 ('vino', 40)
+
