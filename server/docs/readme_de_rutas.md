@@ -1,4 +1,4 @@
-1- ruta para recibir todas las recetas y sus ingredientes y valores
+1- ruta para recibir todas las recetas        "y sus ingredientes y valores"
 2- ruta donde se refle una receta y sus correspondientes ingredientes
  
 3- crear receta y sus ingredientes
