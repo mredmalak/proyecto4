@@ -25,4 +25,13 @@ WHERE
   return recetarios;
 };
 
-export default { getAll, getIngredientesDeReceta };
+const createNewReceta = async (name, process, porciones) => {
+  const newReceta = await query({
+    tag: 'recetarios.createNewReceta',
+    queryString: `INSERT INTO recetas (name_receta, procces_receta, porciones_receta) VALUES
+    ('${name}', '${process}', ${porciones})`,
+  })
+  return newReceta
+}
+
+export default { getAll, getIngredientesDeReceta, createNewReceta };
