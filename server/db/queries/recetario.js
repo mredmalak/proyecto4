@@ -34,4 +34,12 @@ const createNewReceta = async (name, process, porciones) => {
   return newReceta
 }
 
-export default { getAll, getIngredientesDeReceta, createNewReceta };
+const getReceta = async (name) => {
+  const receta = await query({
+    tag: 'recetarios.getReceta',
+    queryString: `SELECT * FROM recetas WHERE name_receta LIKE '%${name}%'`
+  })
+  return receta
+}
+
+export default { getAll, getIngredientesDeReceta, createNewReceta, getReceta };
