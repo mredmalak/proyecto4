@@ -8,8 +8,7 @@ const getAll = async () => {
   return recetarios;
 };
 
-
-const getIngredientesDeReceta = async (receta) => {
+const getIngredientesDeReceta = async (name) => {
   const recetarios = await query({
     tag: 'recetarios.getIngreidentesDeReceta',
     queryString: `SELECT
@@ -25,6 +24,5 @@ WHERE
   });
   return recetarios;
 };
-
 
 export default { getAll, getIngredientesDeReceta };

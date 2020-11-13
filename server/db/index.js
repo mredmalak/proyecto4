@@ -2,8 +2,7 @@ import pg from 'pg';
 import logger from '../lib/logger.js';
 const { Pool } = pg;
 const pool = new Pool({
-  connectionString:
-    'postgresql://oscar_german:valerialigiasami@localhost:5432/recetario',
+  connectionString: 'postgresql://eduardo:1@localhost:5432/recetario',
 });
 export const query = async ({ tag = '', queryString, params }) => {
   try {
