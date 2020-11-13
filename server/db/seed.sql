@@ -3,6 +3,7 @@ INSERT INTO recetas (name_receta, procces_receta, porciones_receta) VALUES
   ('carrillera', 'escalfar', 6),
   ('torta de espinacas', 'horneado', 6);
 
+
 INSERT INTO ingredientes (name_ingrediente) VALUES
 ('queso parmesano'),
 ('tomate frito'),
