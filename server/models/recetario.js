@@ -3,10 +3,8 @@ const haveQuery = (object) => {
   return Object.entries(object).length > 0;
 };
 export const getListRecetario = async (query) => {
-  console.log(haveQuery(query));
   try {
     if (haveQuery(query)) {
-      console.log('alex es el amo')
       const name = query['receta'];
       const ingredientesDeReceta = Recetario.getIngredientesDeReceta(name);
       return ingredientesDeReceta;
@@ -29,3 +27,13 @@ export const createNewReceta = async (headers) => {
     throw new Error(error);
   }
 }
+
+export const getReceta = async (query) => {
+  try {
+    const name = query
+    const receta = Recetario.getReceta(name)
+    return receta
+  } catch (error) {
+    throw new Error(error);
+  }
+};
