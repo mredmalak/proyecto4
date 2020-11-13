@@ -24,7 +24,7 @@ server.use(jsonResponse);
 server.use(bodyParser.json());
 server.use(cors());
 server.use(recetarioRouter);
-server.use(ingredientesRouter)
+server.use(ingredientesRouter);
 server.use(healthRouter);
 
 server.listen(PORT, () => logger.info(`Server starting on port ${PORT}🚀📡`));
