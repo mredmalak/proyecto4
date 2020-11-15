@@ -42,4 +42,13 @@ const getReceta = async (name) => {
   return receta
 }
 
-export default { getAll, getIngredientesDeReceta, createNewReceta, getReceta };
+const addIngrediente = async (recetaId, ingredienteId, amountIngrediente) => {
+  const newIngrediente = await query({
+    tag: 'recetarios.addIngredienteAReceta',
+    queryString: `INSERT INTO receta_ingrediente(receta_id, ingrediente_id, amount_ingrediente) VALUES
+    ('${recetaId}', '${ingredienteId}', '${amountIngrediente}')`
+  })
+  return newIngrediente
+}
+
+export default { getAll, getIngredientesDeReceta, createNewReceta, getReceta, addIngrediente };
