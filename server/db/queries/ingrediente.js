@@ -3,7 +3,7 @@ import { query } from '../index.js';
 const getAll = async () => {
   const ingredientes = await query({
     tag: 'ingredientes.getAll',
-    queryString: `SELECT name_ingrediente FROM ingredientes`,
+    queryString: `SELECT * FROM ingredientes`,
   });
   return ingredientes;
 };
