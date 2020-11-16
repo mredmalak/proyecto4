@@ -1,17 +1,19 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { getRecetaByName } from '../lib/api.js';
+import { getRecetaByName, getIngredientesByRecetaName } from '../lib/api.js';
 
 class RecetaIngredientes extends React.Component {
   state = {
     receta: undefined,
     loading: true,
+    ingredientes: undefined,
   };
 
   async componentDidMount() {
     const name = this.props.match.params.name;
     const [recetaData] = await getRecetaByName(name);
-    this.setState({ receta: recetaData });
+    const ingredientes = await getIngredientesByRecetaName(name);
+    this.setState({ receta: recetaData, ingredientes });
     this.setState({ loading: false });
   }
 
@@ -24,6 +26,17 @@ class RecetaIngredientes extends React.Component {
             <p>Porciones de receta: {this.state.receta.porciones_receta}</p>
             <h2>Proceso</h2>
             <p>{this.state.receta.procces_receta}</p>
+            <ul>
+              {this.state.ingredientes.map((ingrediente) => {
+                console.log(ingrediente);
+                return (
+                  <li key={ingrediente.name_ingrediente}>
+                    {ingrediente.name_ingrediente}, cantidad:{' '}
+                    {ingrediente.amount_ingrediente}
+                  </li>
+                );
+              })}
+            </ul>
           </>
         )}
       </>
