@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS  recetas ;
 DROP TABLE IF EXISTS  ingredientes ;
 
 
-CREATE TABLE recetas (receta_id serial PRIMARY KEY, name_receta text NOT NULL, procces_receta VARCHAR (50), porciones_receta INT NOT NULL);
+CREATE TABLE recetas (receta_id serial PRIMARY KEY, name_receta text NOT NULL, procces_receta text NOT NULL, porciones_receta INT NOT NULL);
 
 CREATE TABLE ingredientes (ingrediente_id serial PRIMARY KEY, name_ingrediente text NOT NULL);
 

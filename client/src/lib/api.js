@@ -103,3 +103,14 @@ export const loadRecetaIngredientes = async (receta) => {
   }
 };
 
+export const getIngredientesByRecetaName = async (name) => {
+  try {
+    const response = await fetch(
+      `http://localhost:4000/ingredientes/receta/${name}`,
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};

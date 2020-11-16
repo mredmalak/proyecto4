@@ -30,25 +30,31 @@ const createNewReceta = async (name, process, porciones) => {
     tag: 'recetarios.createNewReceta',
     queryString: `INSERT INTO recetas (name_receta, procces_receta, porciones_receta) VALUES
     ('${name}', '${process}', ${porciones})`,
-  })
-  return newReceta
-}
+  });
+  return newReceta;
+};
 
 const getReceta = async (name) => {
   const receta = await query({
     tag: 'recetarios.getReceta',
-    queryString: `SELECT * FROM recetas WHERE name_receta LIKE '%${name}%'`
-  })
-  return receta
-}
+    queryString: `SELECT * FROM recetas WHERE name_receta LIKE '%${name}%'`,
+  });
+  return receta;
+};
 
 const addIngrediente = async (recetaId, ingredienteId, amountIngrediente) => {
   const newIngrediente = await query({
     tag: 'recetarios.addIngredienteAReceta',
     queryString: `INSERT INTO receta_ingrediente(receta_id, ingrediente_id, amount_ingrediente) VALUES
-    ('${recetaId}', '${ingredienteId}', '${amountIngrediente}')`
-  })
-  return newIngrediente
-}
+    ('${recetaId}', '${ingredienteId}', '${amountIngrediente}')`,
+  });
+  return newIngrediente;
+};
 
-export default { getAll, getIngredientesDeReceta, createNewReceta, getReceta, addIngrediente };
+export default {
+  getAll,
+  getIngredientesDeReceta,
+  createNewReceta,
+  getReceta,
+  addIngrediente,
+};

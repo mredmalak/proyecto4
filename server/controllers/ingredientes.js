@@ -1,4 +1,8 @@
-import { getListIngrediente, createNewIngrediente } from '../models/ingredientes.js';
+import {
+  getListIngrediente,
+  createNewIngrediente,
+  getIngredientesDeRecetaByRecetaName,
+} from '../models/ingredientes.js';
 
 export const listIngredientes = async (request, response) => {
   try {
@@ -17,6 +21,20 @@ export const createIngredientes = async (request, response) => {
     return response.status(200).send(ingrediente);
   } catch (error) {
     const { message } = error;
-    return response.status(500).send({ message })
+    return response.status(500).send({ message });
   }
-}
+};
+
+export const listIngredientesByRecetaName = async (request, response) => {
+  const {
+    params: { name },
+  } = request;
+
+  try {
+    const ingredientes = await getIngredientesDeRecetaByRecetaName(name);
+    return response.status(200).send(ingredientes);
+  } catch (error) {
+    const { message } = error;
+    return response.status(500).send({ message });
+  }
+};

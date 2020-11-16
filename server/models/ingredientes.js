@@ -11,10 +11,21 @@ export const getListIngrediente = async () => {
 
 export const createNewIngrediente = async (headers) => {
   try {
-    const name = headers['name_ingrediente']
-    const newIngrediente = Ingrediente.createNewIngrediente(name)
-    return newIngrediente
+    const name = headers['name_ingrediente'];
+    const newIngrediente = Ingrediente.createNewIngrediente(name);
+    return newIngrediente;
   } catch (error) {
     throw new Error(error);
   }
-}
+};
+
+export const getIngredientesDeRecetaByRecetaName = async (name) => {
+  try {
+    const ingredientes = await Ingrediente.getIngredientesDeRecetaByRecetaName(
+      name,
+    );
+    return ingredientes;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
