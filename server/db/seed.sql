@@ -8,7 +8,19 @@ Bechamel: dependiendo cuanto nos guste la bechamel haremos más o menos, pero lo
 Montar la lasaña: “manchar” la fuente para el horno con un poco de la salsa o bien untarla con mantequilla. Después poner las capas: pasta / carne / bechamel / pasta / carne / bechamel / pasta / bechamel / queso rallado.
 Hornear a unos 180C con el grill. La carne ya está cocinada de antes y la pasta en remojo ya estará bastante blanda, así que en el horno solo necesita estar tiempo suficiente para que el queso se gratine.
 ', 6),
-  ('carrillera', 'escalfar', 6),
+  ('carrillera al vino tinto.', 'En primer lugar, sellamos la carne para que los jugos queden en su interior.
+Primero, con un cuchillo, eliminamos las grasas que puedan tener las carrilleras, y las salpimentamos por todas sus partes. Después, ponemos en una sartén amplia un chorrito de aceite. Lo calentamos a fuego fuerte. Cuando esté caliente, ponemos las carrilleras y las cocinamos durante alrededor de 2-3 minutos por cada lado. Cuando estén doradas las reservamos en un plato.
+Empezamos a hacer la salsa al vino tinto con un sofrito de verduras.
+Después, en la misma sartén, a fuego medio, ponemos otro chorrete de aceite. Cuando esté caliente, añadimos el ajo, la zanahoria, y la cebolla, todo ello bien picado. Lo salpimentamos y dejamos que se cocine durante unos 12 minutos, removiendo de vez en cuando. 
+Ahora vamos a añadir el caldo de carne y lo más importante: el vino tinto
+Pasado este tiempo, añadimos 1 vaso del vino tinto, el caldo de carne y la cucharadita de tomillo. Volvemos a remover para integrar todos los ingredientes. Corregimos de sal y de pimienta.
+Toca añadir las carrilleras y cocinarlas durante un buen rato
+A continuación, añadimos las carrilleras y tapamos. Dejamos que se cocinen durante unas 3 horas manteniendo siempre el fuego medio. Removemos de vez en cuando para que se integren bien los sabores y añadimos más vino cuando la salsa se empiece a secar.
+Trituramos la salsa de nuestras carrilleras de cerdo en salsa de vino tinto
+Pasado ese tiempo, retiramos a un plato las carrilleras y pasamos la salsa a un baso batidor. La trituramos hasta que quede bien fina. Si queda demasiado densa -como una crema- añade un poco más de vino o de caldo. Si queda demasiado caldosa -como una sopa- deja que se cocine unos minutos más.
+Finalmente devolvemos la salsa a la sartén y terminamos el plato
+Para terminar, devolvemos la salsa a la sartén junto con las carrilleras y lo calentamos de nuevo a fuego medio. Corregimos de sal y de pimienta y dejamos que se impregnen bien en la salsa. Finalmente, servimos este delicioso plato acompañado de una guarnición de patatas o de una buena ensalada.
+', 6),
   ('torta de espinacas', 'horneado', 6);
 
 
