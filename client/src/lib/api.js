@@ -102,4 +102,3 @@ export const loadRecetaIngredientes = async (receta) => {
     console.log(error);
   }
 };
-

@@ -26,10 +26,12 @@ class RecetasList extends React.Component {
         <h1>recetas</h1>
         <ul>
           {this.state.recetas.map((receta) => (
-            <div>
+            <div key={receta.name}>
               <li>Receta</li>
               <p key={receta.name_receta}>{receta.name_receta}</p>
-              <Link to="/recetaIngredientes">Ir a esta receta</Link>
+              <Link to={`/recetas/${receta.name_receta}`}>
+                Ir a esta receta
+              </Link>
               <li>Proceso de cocion</li>
               <p>{receta.procces_receta}</p>
               <li>Porciones</li>

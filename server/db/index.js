@@ -5,8 +5,7 @@ const { Pool } = pg;
 // ! Cambiar los datos de la linea 8 para que este correcto en tu local
 
 const pool = new Pool({
-  connectionString:
-    'postgresql://oscar_german:valerialigiasami@localhost:5432/recetario',
+  connectionString: 'postgresql://pataruco@localhost:5432/recetario',
 });
 export const query = async ({ tag = '', queryString, params }) => {
   try {

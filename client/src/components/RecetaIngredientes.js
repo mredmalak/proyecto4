@@ -1,37 +1,35 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { getRecetaByName } from '../lib/api.js';
 
-import { getRecetaByName } from '../lib/api';
+class RecetaIngredientes extends React.Component {
+  state = {
+    receta: undefined,
+    loading: true,
+  };
 
- class RecetaIngredientes extends React.Component {
-//   state = {
-//     ingredientes: [],
-//   };
+  async componentDidMount() {
+    const name = this.props.match.params.name;
+    const [recetaData] = await getRecetaByName(name);
+    console.log({ recetaData });
+    this.setState({ receta: recetaData });
+    this.setState({ loading: false });
+  }
 
-//   // Funcion para cargar la receta por id desde la base de datos
+  render() {
+    return (
+      <>
+        {this.state.loading === false && (
+          <>
+            <h1>{this.state.receta.name_receta}</h1>
+            <p>Porciones de receta: {this.state.receta.porciones_receta}</p>
+            <h2>Proceso</h2>
+            <p>{this.state.receta.procces_receta}</p>
+          </>
+        )}
+      </>
+    );
+  }
+}
 
-//   async componentDidMount() {
-//     try {
-//       const res = await getIngredientes();
-//       this.setState({ ingredientes: res });
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   }
-
-//   render() {
-//     return (
-//       <>
-//         <h1>Ingredientes</h1>
-//         <ul>
-//           {this.state.ingredientes.map((ingrediente) => (
-//             <li key={ingrediente.name_ingrediente}>
-//               {ingrediente.name_ingrediente}
-//             </li>
-//           ))}
-//         </ul>
-//       </>
-//     );
-//   }
- }
-
-export default RecetaIngredientes;
+export default withRouter(RecetaIngredientes);
