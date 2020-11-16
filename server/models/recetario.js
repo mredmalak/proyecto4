@@ -5,6 +5,7 @@ const haveQuery = (object) => {
 export const getListRecetario = async (query) => {
   try {
     if (haveQuery(query)) {
+      console.log('llegue aqui')
       const name = query['receta'];
       const ingredientesDeReceta = Recetario.getIngredientesDeReceta(name);
       return ingredientesDeReceta;
@@ -22,7 +23,7 @@ export const createNewReceta = async (headers) => {
     const process = headers['procces_receta']
     const porciones = headers['porciones_receta']
     const newReceta = Recetario.createNewReceta(name, process, porciones)
-    return newReceta
+    return name
   } catch (error) {
     throw new Error(error);
   }
@@ -37,3 +38,15 @@ export const getReceta = async (query) => {
     throw new Error(error);
   }
 };
+
+export const addIngredienteAReceta = async (headers) => {
+  try {
+    const recetaId = headers['receta_id']
+    const ingredienteId = headers['ingrediente_id']
+    const amountIngrediente = headers['amount_ingrediente']
+    const newIngrediente = Recetario.addIngrediente(recetaId, ingredienteId, amountIngrediente)
+    return newIngrediente
+  } catch (error) {
+    throw new Error(error);
+  }
+}

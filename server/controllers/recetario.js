@@ -1,4 +1,4 @@
-import { getListRecetario, createNewReceta, getReceta } from '../models/recetario.js';
+import { getListRecetario, createNewReceta, getReceta, addIngredienteAReceta } from '../models/recetario.js';
 
 export const listRecetario = async (request, response) => {
   const { query } = request;
@@ -16,7 +16,7 @@ export const createReceta = async (request, response) => {
   const { headers } = request;
   try {
     const receta = await createNewReceta(headers);
-    return response.status(200).send(receta);
+    return response.status(200).send({ nueva_receta: receta });
   } catch (error) {
     const { message } = error;
     return response.status(500).send({ message })
@@ -35,3 +35,14 @@ export const getRecetaByName = async (request, response) => {
     return response.status(500).send({ message });
   }
 }
+
+export const addIngrediente = async (request, response) => {
+  const { headers } = request;
+  try {
+    const recetario = await addIngredienteAReceta(headers);
+    return response.status(200).send(recetario);
+  } catch (error) {
+    const { message } = error;
+    return response.status(500).send({ message });
+  }
+};
