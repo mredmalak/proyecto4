@@ -1,5 +1,5 @@
 import React from 'react';
-
+import NewIngrediente from './NewIngrediente.js';
 import {
   createNewReceta,
   getIngredientes,
@@ -43,6 +43,15 @@ class NewReceta extends React.Component {
       console.log(err);
     }
   }
+
+  loadListIngredientes = async () => {
+    try {
+      const res = await getIngredientes();
+      this.setState({ ingredientes: res });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   loadRecetaDetails = async (receta) => {
     this.setState({ recetaCreated: true });
@@ -169,6 +178,11 @@ class NewReceta extends React.Component {
               />
               <button>Añadir ingrediente a tu receta</button>
             </form>
+            <NewIngrediente />
+            <button onClick={this.loadListIngredientes}>
+              Carga tu nuevo ingrediente a la lista de seleccion de
+              ingredientes.
+            </button>
           </>
         )}
       </>
