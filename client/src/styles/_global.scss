@@ -1,0 +1,19 @@
+  
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 100%;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  background-size: cover;
+  color: black;
+  background-image: url(../assets/italianTablecloth.png);
+}
+picture {
+  display: block;
+}
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
