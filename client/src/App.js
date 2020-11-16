@@ -7,6 +7,7 @@ import IngredientesSelect from './components/IngredientesSelect';
 import RecetasList from './components/Recetas';
 import NewReceta from './components/NewReceta';
 import NewIngrediente from './components/NewIngrediente';
+import RecetaIngredientes from './components/RecetaIngredientes';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route path="/ingredientes/new" component={NewIngrediente} />
         <Route path="/ingredientes" component={IngredientesSelect} />
+        {/* <Route path="/recetaIngredientes" component={RecetaIngredientes} /> */}
         <Route path="/recetas/new" component={NewReceta} />
         <Route path="/recetas" component={RecetasList} />
       </Switch>
