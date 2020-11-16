@@ -11,7 +11,6 @@ class RecetaIngredientes extends React.Component {
   async componentDidMount() {
     const name = this.props.match.params.name;
     const [recetaData] = await getRecetaByName(name);
-    console.log({ recetaData });
     this.setState({ receta: recetaData });
     this.setState({ loading: false });
   }
