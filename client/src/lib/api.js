@@ -1,6 +1,8 @@
+const URL = process.env.REACT_APP_URL;
+
 export const getIngredientes = async () => {
   try {
-    const response = await fetch('http://localhost:4000/ingredientes');
+    const response = await fetch(`${URL}/ingredientes`);
     const data = await response.json();
     console.log(response);
     return data;
@@ -11,7 +13,7 @@ export const getIngredientes = async () => {
 
 export const getRecetas = async () => {
   try {
-    const response = await fetch('http://localhost:4000/recetario');
+    const response = await fetch(`${URL}/recetario`);
     const data = await response.json();
     console.log(response);
     return data;
@@ -26,8 +28,8 @@ export const createNewReceta = async ({
   porciones_receta,
 }) => {
   try {
-    const response = await fetch('http://localhost:4000/recetario', {
-      method: 'POST',
+    const response = await fetch(`${URL}/recetario`, {
+      method: `POST`,
       headers: {
         name_receta: name_receta,
         procces_receta: process_receta,
@@ -43,8 +45,8 @@ export const createNewReceta = async ({
 
 export const createNewIngrediente = async ({ name_ingrediente }) => {
   try {
-    const response = await fetch('http://localhost:4000/ingredientes', {
-      method: 'POST',
+    const response = await fetch(`${URL}/ingredientes`, {
+      method: `POST`,
       headers: {
         name_ingrediente: name_ingrediente,
       },
@@ -58,7 +60,7 @@ export const createNewIngrediente = async ({ name_ingrediente }) => {
 
 export const getRecetaByName = async (receta) => {
   try {
-    const response = await fetch(`http://localhost:4000/recetario/${receta}`);
+    const response = await fetch(`${URL}/recetario/${receta}`);
     const data = await response.json();
     console.log(response);
     return data;
@@ -73,17 +75,14 @@ export const addIngredienteAReceta = async ({
   amount_ingrediente,
 }) => {
   try {
-    const response = await fetch(
-      'http://localhost:4000/recetario/receta_ingrediente',
-      {
-        method: 'POST',
-        headers: {
-          receta_id: receta_id,
-          ingrediente_id: ingrediente_id,
-          amount_ingrediente: amount_ingrediente,
-        },
+    const response = await fetch(`${URL}/recetario/receta_ingrediente`, {
+      method: `POST`,
+      headers: {
+        receta_id: receta_id,
+        ingrediente_id: ingrediente_id,
+        amount_ingrediente: amount_ingrediente,
       },
-    );
+    });
     const data = await response.json();
     return data;
   } catch (err) {
@@ -93,9 +92,7 @@ export const addIngredienteAReceta = async ({
 
 export const loadRecetaIngredientes = async (receta) => {
   try {
-    const response = await fetch(
-      `http://localhost:4000/recetario?receta=${receta}`,
-    );
+    const response = await fetch(`${URL}/recetario?receta=${receta}`);
     const data = await response.json();
     return data;
   } catch (error) {
@@ -105,9 +102,7 @@ export const loadRecetaIngredientes = async (receta) => {
 
 export const getIngredientesByRecetaName = async (name) => {
   try {
-    const response = await fetch(
-      `http://localhost:4000/ingredientes/receta/${name}`,
-    );
+    const response = await fetch(`${URL}/ingredientes/receta/${name}`);
     const data = await response.json();
     return data;
   } catch (error) {
