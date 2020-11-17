@@ -1,4 +1,12 @@
- "devDependencies": {
+{
+  "name": "proyecto4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mredmalak/proyecto4.git",
+  "author": "germanmorenoortiz <germanmorenoortiz.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
     "lerna": "^3.22.1"
   },
   "workspaces": [
@@ -8,3 +16,4 @@
   "scripts": {
     "start": "yarn workspace server start"
   }
+}
