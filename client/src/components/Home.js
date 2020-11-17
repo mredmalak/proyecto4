@@ -1,10 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <>
-      <h1>Bienvenidos</h1>
       <h2>¿Que Quieres Comer Hoy?</h2>
       {/* <p>Escoge Tus Ingredientes</p>
       <Link to="/ingredientes">
@@ -24,6 +23,6 @@ const Home = () => {
       </Link> */}
     </>
   );
-}
+};
 
-export default Home
+export default Home;

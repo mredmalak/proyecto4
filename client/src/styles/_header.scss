@@ -1,4 +1,23 @@
+h1 {
+  text-decoration-style: none;
+  color: black;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  li {
+    flex-grow: 3;
+  }
+  li.logo {
+    background: url(../assets/png-transparent-italian-cuisine-chef-cartoon-pasta-cooking.png)
+      no-repeat;
+    background-size: contain;
+    background-color: none;
+    position: relative;
+  }
+}
+
 header {
-  text-align: center;
-  color: whitesmoke;
+  background-image: url(../assets/fondo-madera-madera-textura-patron-wallpaper-concepto_53876-14103.jpg);
 }

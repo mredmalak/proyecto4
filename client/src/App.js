@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './components/Home';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import IngredientesSelect from './components/IngredientesSelect';
 import RecetasList from './components/Recetas';
 import NewReceta from './components/NewReceta';
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/recetas/:name" component={RecetaIngredientes} />
         <Route path="/recetas" component={RecetasList} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };
