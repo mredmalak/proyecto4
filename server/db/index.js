@@ -6,7 +6,7 @@ const { Pool } = pg;
 
 const pool = new Pool({
   connectionString:
-    process.env.DATABSE_URL ||
+    process.env.DATABASE_URL ||
     'postgresql://eduardo:1@localhost:5432/recetario',
 });
 export const query = async ({ tag = '', queryString, params }) => {
