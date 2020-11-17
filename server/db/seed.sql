@@ -21,7 +21,24 @@ Pasado ese tiempo, retiramos a un plato las carrilleras y pasamos la salsa a un 
 Finalmente devolvemos la salsa a la sartén y terminamos el plato
 Para terminar, devolvemos la salsa a la sartén junto con las carrilleras y lo calentamos de nuevo a fuego medio. Corregimos de sal y de pimienta y dejamos que se impregnen bien en la salsa. Finalmente, servimos este delicioso plato acompañado de una guarnición de patatas o de una buena ensalada.
 ', 6),
-  ('torta de espinacas', 'horneado', 6);
+  ('torta de espinacas', '
+    Descongelar la espinaca o cocinarla 10 minutos en agua y poca sal. Colar retirando todo el líquido.
+    Picar los ingrediente para el hogao (sofrito).
+    En una sartén con poco aceite, poner la cebolla larga (en rama, scallions) con sal, pimienta y comino, dejar hasta que la cebolla esté transparente.
+    Agregar el tomate y el ajo, poner un poco más de condimento si necesita.
+    Dejar cocinar a fuego medio hasta que el tomate esté blando, retirar y reservar.
+    En un recipiente poner la espinaca escurrida, agregar el hogao, mezclar.
+    Añadir la mantequilla derretida a temperatura ambiente, revolver y condimentos al gusto.
+    Batir los huevos con la leche y un poco de sal y pimienta, añadirlos a la mezcla.
+    Agregar la harina y revolver de manera que no queden grumos.
+    La mezcla debe quedar de una espesa y firme, no líquida, si hace falta poner más harina.
+    En una sartén a fuego medio bajo derretir una cucharada de mantequilla y dar vuelta al sartén para que queden impregnadas las paredes.
+    Se espolvorea con poca harina.
+    Con una brocha se revuelven un poco los dos ingredientes, poner el fuego en bajo.
+    Incorporar la mezcla.
+    Tapar y dejar cocinar por 25 minutos o hasta que la torta esté bien cuajada.
+    Dejar enfriar unos 10 minutos antes de cortar las porciones. Si por algún motivo no despega, no es necesario desmoldar.
+', 6);
 
 
 INSERT INTO ingredientes (name_ingrediente) VALUES
