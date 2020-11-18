@@ -52,4 +52,4 @@ EXAMPLES WEB DISPLAY
 ![Home](image/Nueva_receta.png)
 ![Home](image/Recetas.png)
 
-Thanks to Alex Wheldon and Pedro Martín to suppport into the development of this project
+Thanks to Alex Wheldon and Pedro Martín to suppport us into the development of this project 
